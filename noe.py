@@ -14,11 +14,9 @@ class Enemy:
     self.gold = gold
     self.dameg = damag
 
+
+
 player = Player(10, 10, 10, 0, 3)
 enemy = Enemy(10, 5, 3)
 
-print("Player: ","Health: ", player.health, "Hunger: ", player.hunger, "Hydration: ", player.hydration, "Gold: ", player.gold)
-
-print("Enemy: ","Health: ", enemy.health, "Gold: ", enemy.gold)
-
-
+print("Player: ","Health: ", player.health, "Hunger: ", player.hunger, "Hydration: ", player.hydration, "Gold: ", player.gold)  
