@@ -1,0 +1,24 @@
+import random
+
+class Player:
+  def __init__(self, health, hunger, hydration, gold, dameg):
+    self.health = health
+    self.hunger = hunger
+    self.hydration = hydration
+    self.gold = gold
+    self.dameg = dameg
+  
+class Enemy:
+  def __init__(self, health, gold, dameg):
+    self.health = health
+    self.gold = gold
+    self.dameg = dameg
+
+player = Player(10, 10, 10, 0, 3)
+enemy = Enemy(10, 5, 3)
+
+print("Player: ","Health: ", player.health, "Hunger: ", player.hunger, "Hydration: ", player.hydration, "Gold: ", player.gold)
+
+print("Enemy: ","Health: ", enemy.health, "Gold: ", enemy.gold)
+
+
