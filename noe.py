@@ -19,4 +19,4 @@ class Enemy:
 player = Player(10, 10, 10, 0, 3)
 enemy = Enemy(10, 5, 3)
 
-print("Player: ","Health: ", player.health, "Hunger: ", player.hunger, "Hydration: ", player.hydration, "Gold: ", player.gold)  
+print("Player: ","Health: ", player.health, "Hunger: ", player.hunger, "Hydration: ", player.hydration, "Gold: ", player.gold)
