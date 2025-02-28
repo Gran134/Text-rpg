@@ -6,6 +6,5 @@
 - [ ] En måte å fighte på
 - [ ] En shop
 - [X] Food
-  - [ ] En måte å heale på
-  - [ ] Få tilbake hunger
+  - [X] En måte å heale på
   - [ ] Få tilbake hydration
