@@ -5,7 +5,7 @@
 - [x] lag en enemy
 - [ ] En måte å fighte på
 - [ ] En shop
-- [ ] Food
+- [X] Food
   - [ ] En måte å heale på
   - [ ] Få tilbake hunger
   - [ ] Få tilbake hydration
