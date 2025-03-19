@@ -7,5 +7,7 @@
 - [ ] En shop
 - [X] Food
   - [X] En måte å heale på
-  - [ ] Få tilbake hydration
+  - [X] Få tilbake hydration
+  - [ ] Rått kjøtt
+  - [ ] stekt kjøtt  
 - [ ] Skrive feil :]

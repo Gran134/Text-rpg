@@ -1,5 +1,5 @@
-import random
-import os
+""" import random 
+import os """
 
 class Player:
   def __init__(self, health, hydration, gold, damage):
@@ -10,7 +10,7 @@ class Player:
 
   @property
   def hydration(self):
-    if self._hydration >= 10:
+    if self._hydration > 10:
       self._hydration = 10
     return self._hydration
   
@@ -18,6 +18,8 @@ class Player:
   def hydration(self, value):
     if value > 10:
       self._hydration = 10
+    elif value <= 0:
+      self._hydration = 0
     else:
       self._hydration = value
     
@@ -28,7 +30,7 @@ class Player:
 
   @property
   def health(self):
-    if self._health >= 10:
+    if self._health > 10:
       self._health = 10
     return self._health
   
@@ -36,6 +38,8 @@ class Player:
   def health(self, value):
     if value > 10:
       self._health = 10
+    elif value <= 0:
+      self._health = 0
     else:
       self._health = value
   
@@ -43,13 +47,32 @@ class Player:
   def health(self):
     del self.hydration
 
-# Change all damag with damage
+
 class Enemy:
-  def __init__(self, health, gold, damag):
+  def __init__(self, health, gold, damage):
     self.health = health
     self.gold = gold
-    self.dameg = damag
-
+    self.damege = damage
+  
+  @property
+  def health(self):
+    if self._health > 10:
+      self._health = 10
+    return self._health
+  
+  @health.setter
+  def health(self, value):
+    if value > 10:
+      self._health = 10
+    elif value <= 0:
+      self._health = 0
+    else:
+      self._health = value
+  
+  @health.deleter
+  def health(self):
+    del self.hydration
+  
 class Food:
   def __init__(self, food_name, regenerate_food):
     self.food_name = food_name
@@ -60,8 +83,8 @@ class Drinks:
     self.drink_name = drink_name
     self.regenerate_hydration = regenerate_hydration
 
-player = Player(10, 10, 0, 3)
-enemy = Enemy(10, 5, 3)
+player = Player(10, 10, 0, 3) # Health, Hydration, Gold, Damage
+enemy = Enemy(10, 5, 3) # Health, Gold, Damage
 meet = Food("meet", 5)
 water = Drinks("water", 3)
 
