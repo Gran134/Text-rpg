@@ -8,3 +8,4 @@
 - [X] Food
   - [X] En måte å heale på
   - [ ] Få tilbake hydration
+- [ ] Skrive feil :]
