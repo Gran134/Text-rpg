@@ -23,8 +23,8 @@ class Drinks:
   def __init__(self, drink_name, regenerate_hydration):
     self.drink_name = drink_name
     self.regenerate_hydration = regenerate_hydration
-    
-  
+ 
+
 
 player = Player(10, 10, 0, 3)
 enemy = Enemy(10, 5, 3)
