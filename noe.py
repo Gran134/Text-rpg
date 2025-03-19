@@ -2,12 +2,12 @@ import random
 import os
 
 class Player:
-  def __init__(self, health, hydration, gold, damag):
+  def __init__(self, health, hydration, gold, damage):
     self.health = health
     self.hydration = hydration
     self.gold = gold
-    self.dameg = damag
-  
+    self.damege = damage
+# Change all damag with damage
 class Enemy:
   def __init__(self, health, gold, damag):
     self.health = health
