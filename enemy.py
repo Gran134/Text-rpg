@@ -6,14 +6,14 @@ class Enemy:
   
   @property
   def health(self):
-    if self._health > 9:
-      self._health = 9
+    if self._health > 10:
+      self._health = 10
     return self._health
   
   @health.setter
   def health(self, value):
-    if value > 9:
-      self._health = 9
+    if value > 10:
+      self._health = 10
     elif value <= -1:
       self._health = -1
     else:

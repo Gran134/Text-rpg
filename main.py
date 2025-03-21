@@ -18,7 +18,15 @@ if player_choise == 1:
 if player_choise == 2:
   player.hydration += water.regenerate_hydration
 
+if player_choise == 3:
+  random_hit = 1 # """random.randint(1,2)"""
+  if random_hit == 1:
+    print(f"You attaced an enemy. He took {player.damege} damage.")
+    enemy.health -= player.damege
+
+
 print(f"Health:  {player.health}. Hydration:  {player.hydration}")
+print(f"Enemy: Health: {enemy.health} Gold: {enemy.gold}")
 
 # print(f"Player: Health: {player.health} Hunger: {player.hunger} Hydration: {player.hydration} Gold: {player.gold}")
 
