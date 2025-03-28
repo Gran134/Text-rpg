@@ -2,7 +2,7 @@
 
 - [x] Lag en player
   - [x] Flere våpen
-    - [ ] Equipe våpen?
+    - [x] Equipe våpen?
 - [x] lag en enemy
 - [x] En måte å fighte på
 - [ ] En shop

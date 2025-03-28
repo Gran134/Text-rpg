@@ -12,14 +12,14 @@ player = Player(10, 10, 0, 3) # Health, Hydration, Gold, Damage
 enemie = Enemie(10, 5, 3) # Health, Gold, Damage
 meat = Food("meat", 5)
 water = Drinks("water", 3)
-sword = Weapons("sword", 6)
+sword = Weapons("sword", 3)
 
 inventory = []
 
 while True:
   while True:
     try:
-      player_choise = int(input("\n1. Eat: \n2. Drink: \n3. Fight: \n4. Show stats: \n5. Seartch for water \n6. Seartch for food \n7. Quit the game \n8.  \nwhat do you want to do: "))
+      player_choise = int(input("\n1. Eat: \n2. Drink: \n3. Fight: \n4. Show stats: \n5. Seartch for water \n6. Seartch for food \n7. Quit the game \n8. Open inventory \n9. Shop \nWhat do you want to do: "))
     except:
       print("Invalid input")
       time.sleep(3)
@@ -51,6 +51,7 @@ while True:
       enemie.health -= player.damege
       if enemie.health <= 0:
         player.gold += enemie.gold
+        print("You killed the enemie!")
         enemie = Enemie(10, 5, 3)
     elif random_hit == 2:
       print(f"The enemie attaked you. You took {enemie.damege} damage.")
@@ -62,7 +63,7 @@ while True:
     print(f"Enemie: Health: {enemie.health} Gold: {enemie.gold}\n")
 
   elif player_choise == 4:
-   print(f"\nPlayer: Health: {player.health}. Hydration: {player.hydration}. Gold: {player.gold}.\nInventory {inventory}")
+   print(f"\nPlayer: Health: {player.health}. Hydration: {player.hydration}. Gold: {player.gold}.")
   
   elif player_choise == 5:
     random_seartch_water = random.randint(1,3)
@@ -83,6 +84,24 @@ while True:
   elif player_choise == 7:
     print("Good bye my friend!")
     break
+
+  elif player_choise == 8:
+    print(f"Inventory: {inventory}")
+    if "sword" in inventory:
+      player_choise_weapon = input("Dou you want to equip a weapon (Y/N): ").lower()
+      if player_choise_weapon == "y":
+        player.damege += sword.damage
+        inventory.remove("sword")
+      elif player_choise_weapon == "n":
+        time.sleep(3)
+        os.system("clear") # clears the terminkllaaa
+        continue
+      else:
+        print("That is not an option!")
+      
+  elif player_choise == 9:
+    pass
+    
 
   time.sleep(3)
   os.system("clear") # clears the terminkllaaa
