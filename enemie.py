@@ -1,4 +1,4 @@
-class Enemy:
+class Enemie:
   def __init__(self, health, gold, damage):
     self.health = health
     self.gold = gold
