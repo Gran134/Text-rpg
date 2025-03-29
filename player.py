@@ -8,12 +8,12 @@ class Player:
 
   def show_inventory(self):
         if self.inventory:
-            print("\n--- Inventory ---")
+            print("--- Inventory ---\n")
             for item in self.inventory:
                 print(f"- {item}")
             print("-----------------")
         else:
-            print("\nYour inventory is empty!")
+            print("--- Inventory ---\nYour inventory is empty!\n-----------------")
 
   @property
   def hydration(self):

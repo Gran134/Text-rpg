@@ -1,15 +1,15 @@
-from player import Player
+import os
 shop_items = {
-    "sword" : 40,
-    "meat" : 10,
-    "water" : 5
+    "sword" : 20,
+    "cooked meat" : 10,
+    "clean water" : 5
 }
 
 
 class Shop:
     @staticmethod
     def display_shop():
-        print("\n---shop---")
+        print("---shop---\n")
         for item, price in shop_items.items():
             print(f"{item}: {price} gold")
         print("------------------")
@@ -24,5 +24,8 @@ class Shop:
                 print(f"You bought {item_name} for {price} gold. You now have {player.gold} gold left.")
             else:
                 print("Not enough gold!")
+        elif item_name == "exit":
+                    os.system("clear")
+                    print("---Exiting the shop---")
         else:
             print("Item not found!")
