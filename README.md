@@ -5,7 +5,7 @@
     - [x] Equipe våpen?
 - [x] lag en enemy
 - [x] En måte å fighte på
-- [ ] En shop
+- [x] En shop
 - [x] Inventory
   - [x] Skjekke inventory
 - [X] Food

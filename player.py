@@ -4,6 +4,16 @@ class Player:
     self._hydration = hydration
     self.gold = gold
     self.damege = damage
+    self.inventory = []
+
+  def show_inventory(self):
+        if self.inventory:
+            print("\n--- Inventory ---")
+            for item in self.inventory:
+                print(f"- {item}")
+            print("-----------------")
+        else:
+            print("\nYour inventory is empty!")
 
   @property
   def hydration(self):

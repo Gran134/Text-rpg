@@ -6,15 +6,14 @@ from enemie import Enemie
 from food import Food
 from drinks import Drinks
 from weapons import Weapons
+from shop import Shop
 
-
-player = Player(10, 10, 0, 3) # Health, Hydration, Gold, Damage
+player = Player(10, 10, 70, 3) # Health, Hydration, Gold, Damage
 enemie = Enemie(10, 5, 3) # Health, Gold, Damage
 meat = Food("meat", 5)
 water = Drinks("water", 3)
 sword = Weapons("sword", 3)
-
-inventory = []
+inventory = player.inventory
 
 while True:
   while True:
@@ -100,7 +99,10 @@ while True:
         print("That is not an option!")
       
   elif player_choise == 9:
-    pass
+    os.system("clear")
+    Shop.display_shop()
+    player_choise_shop = str(input("What do you want to buy?: "))
+    Shop.buy_item(player, player_choise_shop)
     
 
   time.sleep(3)
